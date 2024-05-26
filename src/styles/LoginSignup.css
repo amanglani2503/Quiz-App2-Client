@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html,body {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+}
+
+::selection {
+  background: #1a75ff;
+  color: #fff;
+}
+
+.wrapper {
+  overflow-x: hidden;
+  max-width: 390px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+}
+
+.wrapper .title-text {
+  display: flex;
+  width: 200%;
+}
+
+.wrapper .title {
+  width: 50%;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+  color: #000;
+}
+
+.title.login {
+  color: #000;
+}
+
+.title.signup {
+  color: #020202;
+}
+
+.wrapper .slide-controls {
+  position: relative;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  overflow: hidden;
+  margin: 30px 0 10px 0;
+  justify-content: space-between;
+  border: 1px solid lightgrey;
+  border-radius: 15px;
+}
+
+.slide-controls .slide {
+  height: 100%;
+  width: 100%;
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 48px;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.6s ease;
+}
+
+.slide-controls .slide.active {
+  color: #fff;
+  background: -webkit-linear-gradient(left,#003366,#004080,#0059b3, #0073e6);
+  border-radius: 15px;
+}
+
+.slide-controls .slider-tab {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 0;
+  z-index: 0;
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+#signup:checked ~ .slider-tab {
+  left: 50%;
+}
+
+#signup:checked ~ label.signup {
+  color: #070707;
+  cursor: default;
+  user-select: none;
+}
+
+#signup:checked ~ label.login {
+  color: #eceaea;
+}
+
+#login:checked ~ label.signup {
+  color: #0d0d0d;
+}
+
+#login:checked ~ label.login {
+  cursor: default;
+  user-select: none;
+}
+
+.wrapper .form-container {
+  width: 100%;
+  overflow: hidden;
+  height: 56vh;
+}
+
+.form-container .form-inner {
+  display: flex;
+  /* justify-content: center; */
+  width: 200%;
+  margin-top: 0px;
+}
+
+.form-container .form-inner form {
+  width: 50%;
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+.form-inner form .field {
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.form-inner form .field input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 15px;
+  border-radius: 15px;
+  border: 1px solid lightgrey;
+  border-bottom-width: 2px;
+  font-size: 17px;
+  transition: all 0.3s ease;
+}
+
+.signup-link {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.form-inner form.signup .field.btn {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.form-inner form input[type="submit"] {
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+}
+
+.form-inner form input[type="submit"]:hover {
+  transform: scale(1.1);
+  background: -webkit-linear-gradient(left,#003366,#004080,#0059b3, #0073e6);
+  color: #f1efef;
+  font-weight: 600;
+  width: 50%;
+  margin-left: 90px;
+}

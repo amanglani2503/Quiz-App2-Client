@@ -1,0 +1,18 @@
+button {
+    background-color: rgb(13, 254, 0);
+    width: fit-content;
+    border-radius: 6px;
+    padding: 10px;
+    text-align: center;
+    margin: 0px 10px;
+}
+
+.dummy{
+    display: flex;
+    flex-direction: column;
+}
+
+h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
